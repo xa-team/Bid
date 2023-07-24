@@ -1,0 +1,23 @@
+{
+  "name": "bid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xa-team/Bid.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xa-team/Bid/issues"
+  },
+  "homepage": "https://github.com/xa-team/Bid#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.1"
+  }
+}

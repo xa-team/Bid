@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>채팅</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/index.css">
+    </head>
+    <body>
+        <div id="notificationBg">
+            <!-- 알림 영역 -->
+        </div>
+        <div id="main">
+            <div id="chatBg">
+                <!-- 채팅 영역 -->               
+            </div>
+            <div id="inputContainer">
+                <div id="top">
+                    <div id="remainingPoint"></div>
+                    <div id="offerBtnContainer">
+                        <button onclick="offerBtn(this.value)" value="5" class="offerBtn">+5</button>
+                        <button onclick="offerBtn(this.value)" value="10" class="offerBtn">+10</button>
+                        <button onclick="offerBtn(this.value)" value="20" class="offerBtn">+20</button>
+                        <button onclick="offerBtn(this.value)" value="50" class="offerBtn">+50</button>
+                    </div>
+                </div>
+                <div id="bottom">
+                    <!-- <div id="inputTextContainer">
+                        <input type="text" id="inputText" placeholder="메시지를 입력해주세요." onkeypress="sendMessage(event)">
+                        <button type="button" id="sendBtn" onclick="sendMessage({code: 'Enter'})">전송</button>
+                    </div> -->
+                    <div id="timer"></div>
+                    <div id="offerContainer">
+                        <input type="number" class="inputOffer" id="point" value="" onkeypress="offer(event)">
+                        <button type="button" class="inputOffer" onclick="offer({code: 'Enter'})">입찰</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/index.js"></script>
+    </body>
+</html>

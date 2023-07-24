@@ -1,0 +1,244 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 버튼 디자인 */
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  background: #0d6efd;
+  color: #ffffff;
+  
+  margin: 0.2rem 0.2rem;
+  padding: 0.5rem 1rem;
+  
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  
+  border: none;
+  border-radius: 4px;
+  
+  display: inline-block;
+  width: fit-content;
+  
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  
+  cursor: pointer;
+  
+  transition: 0.5s;
+}
+button:active,
+button:hover,
+button:focus {
+  background: #025ce2;
+  outline: 0;
+}
+button:disabled {
+  opacity: 0.5;
+}
+
+
+/* 스크롤바 디자인 */
+*::-webkit-scrollbar {
+    width: 8px;
+}
+*.chat::-webkit-scrollbar-track {
+    background: #add8e6;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #6e6e6e;
+
+    border-radius: 10px;
+    border: 0px solid #ffffff;
+}
+::-webkit-scrollbar-button:vertical:start:decrement,
+::-webkit-scrollbar-button:vertical:start:increment {
+    display: block;
+    height: 8px;
+}
+
+
+#main {
+    display: flex;
+    flex-direction: column;
+
+    margin: 15vh auto 0;
+    text-align: center;
+
+    border-radius: 20px;
+
+    background-color: lightblue;
+    
+
+    width: 50vw;
+    height: 70vh;
+}
+
+
+/* 알림 영역 */
+#notificationBg {
+    position: absolute;
+    
+    text-align: center;
+    top: 0px;
+    z-index: 3;
+
+    width: 100%;
+
+    word-break: break-all;
+}
+.noti{
+    display: inline-block;
+    width: 60%;
+
+    margin: 10px 10px 0;
+    
+    border-radius: 20px;
+
+    opacity: 0;
+    transition: 0.3s;
+}
+.noti.show{
+    opacity: 1;
+}
+
+.connect{
+    background-color: aquamarine;
+}
+
+.disconnect {
+    background-color: #cdb35c;
+}
+
+.lowPoint, .insufficientPoint {
+    background-color: indianred;
+}
+
+.successBid {
+    background-color: #81fcf1;
+}
+
+/* 채팅 영역 */
+#chatBg {
+    display: flex;
+    flex-direction: column;
+
+    height: 90%;
+    width: 100%;
+
+    overflow-y: auto;
+
+    word-break: break-all;
+}
+.chatting {
+    display: flex;
+    flex-direction: row;
+}
+
+.profileImg {
+    width: 30px;
+    height: 30px;
+
+    margin: 5px 5px;
+    padding: 2px;
+
+    border-radius: 70%;
+
+    object-fit: cover;
+}
+
+.me {
+    background-color: lemonchiffon;
+
+    width: fit-content;
+    max-width: 70%;
+
+    margin: 10px 5px 0 auto;
+    padding: 2px 7px;
+
+    border-radius: 10px;
+}
+.other {
+    background-color: white;
+    
+
+    width: fit-content;
+    min-width: 30px;
+    max-width: 70%;
+
+    margin: 5px 5px;
+    padding: 2px 7px;
+
+    border-radius: 10px;    
+}
+
+.offer {
+    margin: 0 auto;
+}
+
+
+/* 인풋 영역 */
+#inputContainer {
+    display: flex;
+    flex-direction: column;
+}
+#remainingPoint {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+#offerBtnContainer {
+    flex: 1 1 0;
+    display: flex;
+    justify-content: space-around;
+}
+.offerBtn {
+    flex: 1 1 0;
+}
+
+#top {
+    display: flex;
+    flex-direction: row;
+}
+#bottom {
+    display: flex;
+    flex-direction: row;
+
+    padding: 5px;
+}
+
+#inputTextContainer, #offerContainer {
+    padding: 2px 5px 10px;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 0;
+    min-width: 0;
+}
+#inputText {
+    flex: 1;
+
+    min-width: 0;
+
+    border-radius: 0.4rem
+}
+#point {
+    flex: 1;
+
+    min-width: 0;
+
+    border-radius: 0.4rem
+}
+
+#timer {
+    width: 50vh;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
